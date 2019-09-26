@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# Seeding the DB
+default_people = [{:email => 'a@a.com', :counter => 3},
+	{:email => 'ab@a.com', :counter => 33},
+	{ :email => 'ac@a.com', :counter => 34}
+]
+
+default_people.each do |person|
+	MainDatum.create!(person)
+end
