@@ -1,0 +1,27 @@
+<%= form_with(model: main_datum, local: true) do |form| %>
+  <% if main_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(main_datum.errors.count, "error") %> prohibited this main_datum from being saved:</h2>
+
+      <ul>
+        <% main_datum.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :counter %>
+    <%= form.number_field :counter %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

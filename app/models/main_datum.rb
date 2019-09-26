@@ -1,0 +1,2 @@
+class MainDatum < ApplicationRecord
+end
