@@ -1,24 +1,8 @@
-# README
+# Ref Tracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hello! Welcome to our Ref Tracker project.
 
-Things you may want to cover:
+This project aims to quanitify word of mouth referrals through a software that stores referrers and referrees. 
 
-* Ruby version
+*  Created using Ruby on Rails. 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
