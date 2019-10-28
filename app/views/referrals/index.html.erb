@@ -1,0 +1,8 @@
+<table>
+  <% @referrals.each do |ref| %>
+    <tr>
+      <td><%= ref.email %></td>
+      <td><%= ref.counter %></td>
+    </tr>
+  <% end %>
+</table>
