@@ -1,2 +1,5 @@
-<h1>Newsletter#sign_up</h1>
-<p>Find me in app/views/newsletter/sign_up.html.erb</p>
+<h1>Sign up for the Newsletter!</h1>
+<%= form_with(model: @user, local: true, url: "/newsletter/sign_up/#{@id}") do |form| %>
+  <%= form.text_field :email, :placeholder => "Enter Email" %>
+  <%= form.submit %>
+<% end %>

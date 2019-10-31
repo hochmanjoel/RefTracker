@@ -15,3 +15,11 @@ default_users = [{:email => 'a@a.com', :counter => 3},
 default_users.each do |user|
 	User.create!(user)
 end
+
+default_referrals = [{:referrer_id => 1, :referredby_id => 2},
+  {:referrer_id => 2, :referredby_id => 3}
+]
+
+default_referrals.each do |referral|
+	Referral.create!(referral)
+end
