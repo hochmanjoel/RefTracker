@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   get 'referrals/details'
   get 'newsletter/sign_up'
   get 'newsletter/success'
-  root 'main_data#index'
+  root 'referrals#index'
 end
