@@ -7,11 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Seeding the DB
-default_people = [{:email => 'a@a.com', :counter => 3},
+default_users = [{:email => 'a@a.com', :counter => 3},
 	{:email => 'ab@a.com', :counter => 33},
 	{ :email => 'ac@a.com', :counter => 34}
 ]
 
-default_people.each do |person|
-	MainDatum.create!(person)
+default_users.each do |user|
+	User.create!(user)
 end
