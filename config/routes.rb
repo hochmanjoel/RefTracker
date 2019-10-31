@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  resources :main_data
+  get 'referrals/index'
+  get 'referrals/details'
+  get 'newsletter/sign_up'
+  get 'newsletter/success'
   root 'main_data#index'
 end

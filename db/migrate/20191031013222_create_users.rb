@@ -1,6 +1,6 @@
-class CreateMainData < ActiveRecord::Migration[6.0]
+class CreateUsers < ActiveRecord::Migration[6.0]
   def change
-    create_table :main_data do |t|
+    create_table :users do |t|
       t.string :email
       t.integer :counter
 
