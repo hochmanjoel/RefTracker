@@ -12,7 +12,7 @@ class NewsletterController < ApplicationController
 
     if @user.save
       cookies[:h_email] = {value: @user.email}
-      redirect_to '/success'
+      redirect_to "/newsletter/success/#{@user.id}"
     else
       logger.info("Error saving user with email, #{email}")
       redirect_to "/sign_up/#{@id}", alert: 'Something went wrong!'
