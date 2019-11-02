@@ -1,0 +1,5 @@
+<%= image_tag("reftrkr.png", :alt => "rss feed") %>
+<%= form_with(model: @user, local: true, url: "/newsletter/sign_up/#{@id}") do |form| %>
+  <%= form.text_field :email, :placeholder => "Enter Email" %>
+  <%= form.submit %>
+<% end %>

@@ -1,2 +1,0 @@
-class MainDatum < ApplicationRecord
-end
