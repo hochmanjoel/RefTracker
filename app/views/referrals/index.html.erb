@@ -25,7 +25,8 @@
           if @referral.find_by(referred: user.id) == nil
             "none"
           else
-            @referral.find_by(referred: user.id).referrer
+            @referrerId = @referral.find_by(referred: user.id).referrer
+            User.find(@referrerId).email
           end
         %></td>
       </tr>
