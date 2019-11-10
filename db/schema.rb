@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_31_013322) do
+ActiveRecord::Schema.define(version: 2019_11_10_191637) do
 
   create_table "referrals", force: :cascade do |t|
-    t.integer "referrer_id"
-    t.integer "referredby_id"
+    t.integer "referrer"
+    t.integer "referred"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -26,4 +26,6 @@ ActiveRecord::Schema.define(version: 2019_10_31_013322) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "referrals", "users", column: "referred"
+  add_foreign_key "referrals", "users", column: "referrer"
 end

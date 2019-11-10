@@ -12,7 +12,8 @@
     </style>
     <th>Email</th>
     <th>Counter</th>
-    <th colspan="3">User Id</th>
+    <th>User Id</th>
+    <th>Referred By</th>
   </thead>
   <tbody>
     <% @user.each do |user| %>
@@ -20,6 +21,13 @@
         <td><%= user.email %></td>
         <td><%= user.counter %></td>
         <td><%= user.id %></td>
+        <td><%=
+          if @referral.find_by(referred: user.id) == nil
+            "none"
+          else
+            @referral.find_by(referred: user.id)
+          end
+        %></td>
       </tr>
     <% end %>
   </tbody>

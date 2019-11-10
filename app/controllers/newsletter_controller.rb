@@ -22,6 +22,7 @@ class NewsletterController < ApplicationController
       @referral = Referral.new(referrer_id: @id, referredby_id: @user.id)
       @referral.save
 
+      #Directs to succes page
       redirect_to "/newsletter/success/#{@user.id}"
     else
       logger.info("Error saving user with email, #{email}")
