@@ -8,10 +8,13 @@ class NewsletterController < ApplicationController
     @id = params[:id]
     email = params[:user][:email]
     @user = User.new(email: email, counter: 0)
-    #@referrer.counter = User.fin
 
     if @user.save
       cookies[:h_email] = {value: @user.email}
+      referrerCount = User.find(@id).counter
+      referrerCount += 1
+      referrer = User.find(@id)
+      referrer.update(counter: referrerCount)
       redirect_to "/newsletter/success/#{@user.id}"
     else
       logger.info("Error saving user with email, #{email}")
