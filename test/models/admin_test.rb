@@ -3,7 +3,8 @@ require 'test_helper'
 class AdminTest < ActiveSupport::TestCase
 
   def setup
-    @admin = Admin.new(name: "Example Admin", email: "user@example.com")
+    @admin = Admin.new(name: "Example Admin", email: "user@example.com",
+      password: "foobar", password_confirmation: "foobar")
   end
 
   test "should be valid" do
@@ -52,4 +53,13 @@ class AdminTest < ActiveSupport::TestCase
     assert_equal mixed_case_email.downcase, @admin.reload.email
   end
 
+  test "password should be present (nonblank)" do
+    @admin.password = @admin.password_confirmation = " " * 6
+    assert_not @admin.valid?
+  end
+
+  test "password should have a minimum length" do
+    @admin.password = @admin.password_confirmation = "a" * 5
+    assert_not @admin.valid?
+  end
 end
