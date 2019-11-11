@@ -6,6 +6,12 @@ class AdminTest < ActiveSupport::TestCase
     @admin = Admin.new(name: "Example Admin", email: "user@example.com")
   end
 
-  test "should be valid" do assert @adin.valid?
+  test "should be valid" do
+    assert @admin.valid?
+  end
+
+  test "name should be present" do
+    @admin.name = "     "
+    assert_not @admin.valid?
   end
 end
