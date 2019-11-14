@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   post 'newsletter/sign_up/:id', to: 'newsletter#submit'
   get 'newsletter/success/:id', to: 'newsletter#success'
   get '/admin_signup', to: 'admins#new'
+  resources :admins
 end
