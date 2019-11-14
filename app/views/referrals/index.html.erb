@@ -1,8 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Followers</title>
 
-<%= image_tag("reftrkr.png", :alt => "rss feed") %>
-<table>
-  <thead>
-    <style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<img src="reftrkr.png" class="img-thumbnail" alt="logo" style="max-width: 50%; height: auto">
+<div class="page-header">
+
+</div>
+
+<div class="container">
+  <h2>Followers</h2>
+  <table class="table table-striped table-bordered table-hover table-lg", content="width=device-width, initial-scale=1">
+    <caption>List of users</caption>
+    <thead>
+      <style>
       table, th, td {
         padding: 10px;
         border: 1px solid black;
@@ -10,6 +29,7 @@
         text-align: center;
       }
     </style>
+
     <th>Email</th>
     <th>Counter</th>
     <th>User Id</th>
@@ -30,6 +50,18 @@
           end
         %></td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @user.each do |user| %>
+        <tr>
+          <td><%= user.email %></td>
+          <td><%= user.counter %></td>
+          <td><%= user.id %></td>
+        </tr>
+      <% end %>
+      </tbody>
+  </table>
+</div>
+
+</body>
+</html>
