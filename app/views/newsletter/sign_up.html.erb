@@ -1,7 +1,8 @@
-<div class="center col-xs-12 col-sm-6 col-sm-offset-4">
-  <h1>Sign Up!</h1>
-</div>
+<h1>Sign Up!</h1>
 
+<p>
+  <Strong>Please enter your email!</Strong>
+</p>
 <%= form_with(model: @user, local: true, url: "/newsletter/sign_up/#{@id}") do |form| %>
   <%= form.text_field :email, :placeholder => "Enter Email" %>
   <%= form.submit %>
