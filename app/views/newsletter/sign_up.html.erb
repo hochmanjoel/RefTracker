@@ -1,8 +1,11 @@
 <h1>Sign Up!</h1>
 
+<img src="patrick-tomasso-g6hIve4oc04-unsplash.jpg" class="img-fluid" alt="Welcome Image" style="max-width: 100%; height: auto">
+
 <p>
   <Strong>Please enter your email!</Strong>
 </p>
+
 <%= form_with(model: @user, local: true, url: "/newsletter/sign_up/#{@id}") do |form| %>
   <%= form.text_field :email, :placeholder => "Enter Email" %>
   <%= form.submit %>
