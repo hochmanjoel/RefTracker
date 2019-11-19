@@ -9,8 +9,22 @@ class AdminsSignupTest < ActionDispatch::IntegrationTest
                                          password: "foo",
                                          password_confirmation: "bar" } }
     end
-    assert_template '/signup'
-    assert_select 'div#<CSS id for error explanation>'
-    assert_select 'div.<CSS class for field with error>'
+    assert_template 'admins/new'
+    assert_select 'div#error_explanation>'
+    assert_select 'div.field_with_errors>'
+  end
+
+  test "valid signup information" do
+    get signup_path
+    assert_difference 'Admin.count', 1 do
+      post admins_path, params: { user: { name: "Example Admin",
+        email: "user@example.com",
+        password:              "password",
+        password_confirmation: "password"
+        }
+      }
+    end
+    follow_redirect!
+    assert_template 'admins/show'
   end
 end
