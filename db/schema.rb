@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 2019_11_11_210544) do
   end
 
   create_table "referrals", force: :cascade do |t|
-    t.integer "referrer_id"
-    t.integer "referredby_id"
+    t.integer "referrer"
+    t.integer "referred"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -35,4 +35,6 @@ ActiveRecord::Schema.define(version: 2019_11_11_210544) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "referrals", "users", column: "referred"
+  add_foreign_key "referrals", "users", column: "referrer"
 end

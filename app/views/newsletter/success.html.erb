@@ -1,4 +1,19 @@
-<%= image_tag("reftrkr.png", size: "16x10", :alt => "rss feed") %>
 
-<p>Share the link below to refer people:</p>
-<p><%= "http://localhost:3000/newsletter/sign_up/#{params[:id]}" %></p>
+<%= image_tag("reftrkr.png", :alt => "rss feed", style="height:50%, width:auto)" %>
+<div>
+    <p style="font-family: Arial">
+        <Strong>Share the link below to refer people:</Strong>
+    </p>
+</div>
+
+<div>
+    <p style="color: blue; font-family: Arial">
+        <%= "http://localhost:3000/newsletter/sign_up/#{params[:id]}" %>
+    </p>
+</div>
+<div>
+    <p style="font-family: Arial">
+        We look forward to talking soon!
+    </p>
+</div>
+
