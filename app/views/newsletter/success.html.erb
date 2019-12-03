@@ -1,6 +1,14 @@
-<%= image_tag("reftrkr.png", size: "16x10", :alt => "rss feed") %>
+<%= image_tag("successhome.png", :alt => "rss feed") %>
 
-<p>Share the link below to refer people:</p>
+<SPAN ID="copytext" STYLE="height:150;width:162;background-color:pink">
+<%= "http://localhost:3000/newsletter/sign_up/#{params[:id]}" %>
+</SPAN>
+
+<TEXTAREA ID="holdtext" STYLE="display:none;">
+</TEXTAREA>
+<BUTTON onClick="ClipBoard();">Copy to Clipboard</BUTTON>
+
+
 <p><%= "http://localhost:3000/newsletter/sign_up/#{params[:id]}" %></p>
 
 <div class="progress">
