@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'newsletter/success/:id', to: 'newsletter#success'
 
   # Routes for Google authentication
+  get 'referral/signin', to:'referral#signin'
   get 'auth/:provider/callback', to: 'sessions#googleAuth'
   get 'auth/failure', to: redirect('/')
 end

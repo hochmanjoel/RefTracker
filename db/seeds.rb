@@ -23,3 +23,12 @@ default_referrals = [{:referrer => 1, :referred => 2},
 default_referrals.each do |referral|
 	Referral.create!(referral)
 end
+
+default_owners = [{:name => 'Ilana Seidl', :email => 'u15iseidl@gmail.com'},
+	{:name => 'Mason Caplin', :email => 'mcaplin98@gmail.com'},
+	{:name => 'Joel Hochman', :email => 'hochmanjoel@gmail.com'}
+]
+
+default_owners.each do |owner|
+	Owner.create!(owner)
+end

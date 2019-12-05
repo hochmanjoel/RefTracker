@@ -1,9 +1,13 @@
 class ReferralsController < ApplicationController
   def index
-    @user = User.all
-    @referral = Referral.all
+    if @access_token.credentials.token != nil
+      @user = User.all
+      @referral = Referral.all
+    else
+      redirect_to '/referral/signin'
+    end
   end
 
-  def details
+  def signin
   end
 end
