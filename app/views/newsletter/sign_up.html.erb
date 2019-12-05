@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <h1>Welcome!</h1>
 
@@ -6,8 +7,20 @@
 <p>
   <Strong>Please enter your email!</Strong>
 </p>
+=======
+>>>>>>> 09206d15a5bfaf49fbbeeeb930491cb02ac263c7
 
+
+<%= image_tag("home.png", :alt => "rss feed") %>
+<div class="form">
 <%= form_with(model: @user, local: true, url: "/newsletter/sign_up/#{@id}") do |form| %>
-  <%= form.text_field :email, :placeholder => "Enter Email" %>
+  <%= form.text_field :email, :placeholder => "Enter Email", "size" => 20%>
   <%= form.submit %>
+<<<<<<< HEAD
 <% end %>
+=======
+<% end %>
+</div>
+
+</div>
+>>>>>>> 09206d15a5bfaf49fbbeeeb930491cb02ac263c7

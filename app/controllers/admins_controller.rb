@@ -1,7 +1,7 @@
 class AdminsController < ApplicationController
-  def show
-    @user = User.all
-  end
+  # def show
+  #   @Admin = Admin.all
+  # end
 
   def new
     @admin = Admin.new
