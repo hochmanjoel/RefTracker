@@ -1,2 +1,6 @@
-@import "~bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+$primary: #757575;
+$light: #e9ecef;
+
+@import 'bootstrap';
+@import 'bootstrap_custom.scss';
+@import "bootstrap/theme";
