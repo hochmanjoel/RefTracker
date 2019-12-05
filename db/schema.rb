@@ -22,8 +22,12 @@ ActiveRecord::Schema.define(version: 2019_11_11_210544) do
   end
 
   create_table "referrals", force: :cascade do |t|
+<<<<<<< HEAD
     t.integer "referrer"
     t.integer "referred"
+=======
+    t.integer "referredby_id"
+>>>>>>> 09206d15a5bfaf49fbbeeeb930491cb02ac263c7
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
