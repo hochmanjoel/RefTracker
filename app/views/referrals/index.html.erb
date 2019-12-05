@@ -202,6 +202,14 @@
             <td><%= user.email %></td>
             <td><%= user.counter %></td>
             <td><%= user.id %></td>
+            <td><%=
+                if @referral.find_by(referred: user.id) == nil
+                  "none"
+                else
+                  @referrerId = @referral.find_by(referred: user.id).referrer
+                  User.find(@referrerId).email
+                end
+            %></td>
           </tr>
         <% end %>
       </table>
